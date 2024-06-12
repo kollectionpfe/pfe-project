@@ -1,5 +1,11 @@
 {
     "version": 2,
+    "builds": [
+      {
+        "src": "dist/main.js",
+        "use": "@vercel/node"
+      }
+    ],
     "routes": [
       {
         "src": "/(.*)",
@@ -7,15 +13,8 @@
       }
     ],
     "buildCommand": "npm run build",
-    "installCommand": "npm install",
-    "outputDirectory": "dist",
-    "functions": {
- 
-    "dist/*.js": {
-      "memory": 1024,
-      "maxDuration": 30
-    }
-  }
+    "installCommand": "npm install"
+  
 
 
 }

@@ -29,11 +29,11 @@ import { UserGuard } from './user/user.guard';
     ConfigModule.forRoot(),
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'nnz.h.filess.io',
-      port: 3307,
-      username: 'pfetest_arrangegun',
-      password: '5b88e152f1e8a7b1d5f45b98c48d155bc6980af3',
-      database: 'pfetest_arrangegun',
+      host: process.env.DATABASE_HOST,
+      port: Number(process.env.DATABASE_PORT),
+      username: process.env.DATABASE_USER,
+      password: process.env.DATABASE_PASSWORD,
+      database: process.env.DATABASE_NAME,
       entities: [
         User,
         Artist,
