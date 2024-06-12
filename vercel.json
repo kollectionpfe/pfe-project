@@ -12,7 +12,7 @@
     "functions": {
  
     "dist/*.js": {
-      "memory": 3009,
+      "memory": 1024,
       "maxDuration": 30
     }
   }
