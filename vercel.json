@@ -2,19 +2,26 @@
     "version": 2,
     "builds": [
       {
-        "src": "api/main.js",
+        "src": "dist/main.js",
         "use": "@vercel/node"
       }
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "api/main.js"
+        "dest": "dist/main.js"
       }
     ],
     "buildCommand": "npm run build",
     "installCommand": "npm install",
-    "outputDirectory": "api"
+    "outputDirectory": "dist",
+    "functions": {
+ 
+    "dist/*.js": {
+      "memory": 3009,
+      "maxDuration": 30
+    }
+  }
 
 
 }
