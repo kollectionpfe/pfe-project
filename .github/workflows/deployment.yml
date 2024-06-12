@@ -19,10 +19,6 @@ jobs:
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: 'npm'
-
-
-            - name: Move to API
-              run: cd api
               
             - name: Run CI command
               run: npm ci
